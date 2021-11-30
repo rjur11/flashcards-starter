@@ -14,9 +14,15 @@ describe("Turn", function () {
     expect(turn).to.be.an.instanceof(Turn);
   });
 
-  it("should return a guess", function () {
-    const turn = new Turn("dog", card);
-    expect(Turn.returnGuess).to.equal("dog");
+  it.only("should return a guess", function () {
+    const card = new Card(
+      1,
+      "What is Robbie's favorite animal",
+      ["sea otter", "pug", "capybara"],
+      "sea otter"
+    );
+    const turn = new Turn("pug", card);
+    expect(Turn.returnGuess).to.equal("pug");
   });
 
   it("should return the card", function () {
