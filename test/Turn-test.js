@@ -23,4 +23,19 @@ describe("Turn", function () {
     const card = new Card();
     expect(Turn.returnCard).to.equal(Card);
   });
+
+  it("should return a boolean indicating if the user's guess matches the correct answer on the card", function () {
+    const turn = new Turn(guess, card);
+    expect(Turn.guess).to.equal(Card.correctAnswer);
+  });
+
+  it("should return 'incorrect!' if guess is incorrect", function () {
+    const turn = new Turn(guess, card);
+    expect(Turn.guess).to.not.equal(Card.correctAnswer, "incorrect!");
+  });
+
+  it("should return 'correct!' if guess is incorrect", function () {
+    const turn = new Turn(guess, card);
+    expect(Turn.guess).to.equal(Card.correctAnswer, "correct!");
+  });
 });
