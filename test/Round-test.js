@@ -11,7 +11,6 @@ describe("Round", function () {
   let card3;
   let deck;
   beforeEach(function createDeck() {
-    round = new Round();
     card1 = new Card(
       1,
       "What is Robbie's favorite animal",
@@ -47,7 +46,7 @@ describe("Round", function () {
   });
 
   it("should take a turn", function () {
-    let turn = new Turn();
+    let turn = new Turn(guess);
     expect(turn).to.be.an.instanceOf(Turn);
     expect(round.turns);
   });
