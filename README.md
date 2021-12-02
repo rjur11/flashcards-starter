@@ -1,15 +1,20 @@
-# FlashCards Starter Kit
+# FlashCards!
 
-## Fork This Repo
+## Overview
 
-On the top right corner of this page, click the **Fork** button.
+A simple flashcard type game that allows a user to play through a deck of flashcards in their command line (terminal). Once the game begins, a user is fed one question at a time, each with 3 answers to choose from. A user can cycle through answers with up/down arrow keys or enter the corresponding number (1-3) and hitting enter. The game will notify if the user answered correctly, and will continue through the deck of cards until the end of the flashcard deck. At the end of the game, the user will be given a final score!  
 
-## Setup
+## Technologies Used
 
-Clone down the forked repo (from your GitHub). Since you don't want to name your project "flashcards-starter", you can use an optional argument when you run `git clone` (you replace the `[...]` with the terminal command arguments):
+- JavaScript
+- Node.js
+
+## Setup Instructions
+
+Fork and clone into this repo:
 
 ```bash
-git clone [remote-address] [what you want to name the repo]
+git clone [remote-address]
 ```
 
 Once you have cloned the repo, change into the directory and install the library dependencies. Run:
@@ -18,62 +23,30 @@ Once you have cloned the repo, change into the directory and install the library
 npm install
 ```
 
-To verify that it is setup correctly, run `npm test` in your terminal. You should have 5 pending tests in your `Card` test file that show up.
-
-Running `node index.js` from the root of your project should result in the following message being displayed in your terminal: 
+Finally, to start a game, write `node index.js` in the main folder of the repo. You will see the following message:
 
 ```bash
 Node server running on port 3000
 ```
 
-*Note that you will not need to you run your server until you are instantiating your `Game` class in Iteration 3. Prior to that, you should be using TDD to drive your code. You should check the functionality of your application by running your tests via `npm test`.*
+...as well as a welcome to the game, and your first quesiton. Have fun!
 
 
-## Where to Add Your Code
 
-### JavaScript
+## Created by:
+Rana Jurjus [GitHub](https://github.com/rjur11)
 
-**Create all of your feature code files in the `src` directory.**
+## Application in Action!
 
-We will be using the `module.exports` and `require` syntax to share code across files.
+Game Start:
 
-## How to View Your Code in Action
+<img width="300" alt="Screen Shot 2021-12-02 at 4 32 58 PM" src="https://user-images.githubusercontent.com/69861203/144507290-715b4e59-ddae-42ed-9128-460c6e67e691.png">
 
-Once you are working through Iteration 3, you will want to start your server to test your functionality.
-In the terminal, run:
 
-```bash
-node index.js
-```
+Lets play!:\
+![Playing through some flashcards](https://media.giphy.com/media/uEtQhD1ZGqbw1uLxSS/giphy.gif)
 
-When the game is functioning appropriately, you will be prompted for each question, have the opportunity to select an answer, and will be given feedback. You will be able to play through the entire deck of cards:
+Game End:
 
-![flash cards example gif](https://media.giphy.com/media/1zkb1q58eTiTH6D7wc/giphy.gif)
+<img width="300" alt="Screen Shot 2021-12-02 at 4 37 26 PM" src="https://user-images.githubusercontent.com/69861203/144507463-edb13f90-9686-4cdf-bbcd-3870a4287077.png">
 
----
-
-## Test Files Organization
-
-Similar to feature code, your test code needs to be put in a specific place for it to run successfully.
-
-**Put all of your test files in the `test` directory.** As a convention, all test filenames should end with `-test.js`. For instance: `Round-test.js`.
-
-## Running Your Tests
-
-Run your test suite using the command:
-
-```bash
-npm test
-```
-
-The test results will output to the terminal.
-
----
-
-## Linting Your Code
-
-Run the command in your terminal `npm run lint` to run the linter on your JavaScript code. There will be errors and warnings right from the start in this starter kit - the linter is still running successfully.
-
-Your linter will look at the JavaScript files you have within the `src` directory and the `test` directory. 
-
----
