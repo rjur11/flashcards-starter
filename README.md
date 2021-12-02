@@ -36,7 +36,7 @@ Node server running on port 3000
 ## Created by:
 Rana Jurjus [GitHub](https://github.com/rjur11)
 
-## Application in Action!
+## Game in Action!
 
 Game Start:
 
