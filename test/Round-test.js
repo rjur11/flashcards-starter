@@ -42,12 +42,15 @@ describe("Round", function () {
   });
 
   it("should return the current card being played", function () {
-    expect(round.returnCurrentCard).to.equal(Deck[0]);
+    expect(round.returnCurrentCard()).to.equal(card1);
   });
 
-  it("should take a turn", function () {
-    let turn = new Turn(guess);
-    expect(turn).to.be.an.instanceOf(Turn);
-    expect(round.turns);
+  it("should be able to take turns", function () {
+    expect(round.turns).to.equal(0);
+    let turn1 = round.takeTurn("sea otter");
+    let turn2 = round.takeTurn("spleen");
+    expect(round.turns).to.equal(2);
+    // expect(turn1).to.equal("correct!");
+    // expect(turn2).to.equal("incorrect!");
   });
 });
