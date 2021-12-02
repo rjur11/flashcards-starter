@@ -76,4 +76,22 @@ describe("Round", function () {
     let turn2 = round.takeTurn("spleen");
     expect(round.incorrectGuesses).to.deep.equal([1, 14]);
   });
+
+  it("should calculate and return percentage of correct guesses", function () {
+    let turn1 = round.takeTurn("pug");
+    let turn2 = round.takeTurn("gallbladder");
+    expect(round.calculatePercentCorrect()).to.equal(50);
+  });
+  it("should print round over message", function () {
+    let logged = [];
+    console.log = (input) => {
+      logged.push(input);
+    };
+    let turn1 = round.takeTurn("pug");
+    let turn2 = round.takeTurn("gallbladder");
+    round.endRound();
+    expect(logged).to.deep.equal([
+      "** Round over! ** You answered 50% of the questions correctly!",
+    ]);
+  });
 });
