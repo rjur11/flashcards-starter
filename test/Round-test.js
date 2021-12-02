@@ -50,7 +50,30 @@ describe("Round", function () {
     let turn1 = round.takeTurn("sea otter");
     let turn2 = round.takeTurn("spleen");
     expect(round.turns).to.equal(2);
-    // expect(turn1).to.equal("correct!");
-    // expect(turn2).to.equal("incorrect!");
+  });
+
+  it("should be able to return correct guess feedback", function () {
+    expect(round.turns).to.equal(0);
+    let turn1 = round.takeTurn("sea otter");
+    let turn2 = round.takeTurn("gallbladder");
+    expect(round.turns).to.equal(2);
+    expect(turn1).to.equal("correct!");
+    expect(turn2).to.equal("correct!");
+  });
+
+  it("should be able to return incorrect guess feedback", function () {
+    expect(round.turns).to.equal(0);
+    let turn1 = round.takeTurn("pug");
+    let turn2 = round.takeTurn("spleen");
+    expect(round.turns).to.equal(2);
+    expect(turn1).to.equal("incorrect!");
+    expect(turn2).to.equal("incorrect!");
+  });
+
+  it("should store incorrect guesses in incorrectGuesses array", function () {
+    let turn1 = round.takeTurn("pug");
+    expect(round.incorrectGuesses).to.deep.equal([1]);
+    let turn2 = round.takeTurn("spleen");
+    expect(round.incorrectGuesses).to.deep.equal([1, 14]);
   });
 });
